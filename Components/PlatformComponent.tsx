@@ -1,6 +1,8 @@
 import React from 'react'
-
-const PlatformComponent = () => {
+interface Notification{
+    buttonClick: ()=>void;
+}
+const PlatformComponent: React.FC<Notification> = ({ buttonClick }) => {
     return (
         <div>
             <div className="platform-wrapper relative flex justify-between pt-[4rem] pb-[4rem] pl-[4rem] pr-[4rem]">
@@ -13,7 +15,7 @@ const PlatformComponent = () => {
                             <span style={{ backgroundColor: '#03fc9d', paddingLeft: '5px', paddingRight: '5px', color: '#003b2f' }}>
                                 Trade
                             </span>
-                            <h1 style={{ marginLeft: '1rem' }}>
+                            <h1 className='way' style={{ marginLeft: '1rem' }}>
                                 on the go with our
                             </h1>
                         </div>
@@ -21,7 +23,7 @@ const PlatformComponent = () => {
                             mobile apps.
                         </h1>
                     </section>
-                    <section style={{ marginTop: '2rem' }}>
+                    <section className='pmh' style={{ marginTop: '2rem' }}>
                         <h4 className='w-[83%]' style={{ color: '#003b2f', fontSize: '1.5rem', fontWeight: 'bold' }}>
                             Take control of your crypto anytime with the app that fits your experience
                         </h4>
@@ -34,7 +36,7 @@ const PlatformComponent = () => {
                             Explore the Apps
                         </p>
                     </section>
-                    <button className="landing-btn text-[.9rem]" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '2rem', color: '#003b2f' }}>
+                    <button onClick={buttonClick} className="landing-btn text-[.9rem]" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '2rem', color: '#003b2f' }}>
                         Explore the apps
                     </button>
                 </div>

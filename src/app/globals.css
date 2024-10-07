@@ -107,10 +107,11 @@ h1 {
 .video-container {
   position: relative;
   top: -29px;
+  height: 600px;
 }
 
 .iphone {
-  height: 74%;
+  height: 108%;
   margin: 0;
   z-index: 1;
   display: flex;
@@ -128,6 +129,11 @@ h1 {
 
 .minitext {
   font-family: 'JakartaSans';
+}
+
+.explorer-btn {
+  font-family: 'JakartaSans';
+  font-weight: bold;
 }
 
 .landing-btn {
@@ -300,10 +306,501 @@ h4 {
   display: none;
 }
 
+.footer-content{
+  justify-content: space-between;
+}
+
+.astro-combiner{
+  display: contents !important;
+}
+
+.footer-payment{
+  width: 45% !important;
+}
+
+.notif-wrapper{
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+  color: #003b2f;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background:rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: fixed;
+}
+
+.notif-wrapper p{
+  margin-top: .5rem;
+  font-size: 20px;
+}
+
+.notif-wrapper button {
+   background-color: #03fc9d;
+   width: 100px;
+   height: 35px;
+   border-radius: .3rem ;
+}
+
+.notif-wrapper h1{
+ color: #003b2f;
+}
+
+.notif-btn{
+  display: flex;
+  justify-content: end;
+  font-weight: 600;
+}
+
 /**************** Media Queries ******************/
 
 /* Mobile styles (up to 600px) */
-@media only screen and (max-width: 425px) {
+
+@media only screen and (max-width:334px) {
+  .header-component {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    justify-content: space-between !important;
+  }
+
+  .account-btns {
+    width: 145px !important;
+  }
+
+  .account-btns p {
+    display: none !important;
+  }
+
+  .navlink-container {
+    display: none !important;
+  }
+
+  .menu::before,
+  .menu::after,
+  .menu input {
+    content: '';
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--bar-background);
+    border-radius: var(--bar-radius);
+    transition: opacity var(--animation-timing), width var(--animation-timing);
+  }
+
+  .menu {
+    display: flex !important;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .menu input {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: var(--bar-width) !important;
+  }
+
+  .menu input:checked {
+    opacity: 0;
+    width: 0%;
+  }
+
+  .landing-wrapper {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    overflow: hidden !important;
+  }
+
+  .landing-text {
+    width: 100% !important;
+  }
+
+  .landing-text h1 {
+    padding-left: 5px !important;
+  }
+
+  .landing-text span,
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  .minitext p {
+    width: 100% !important;
+    margin-top: 1.5rem;
+    font-size: 13px !important;
+  }
+
+  .landing-btn {
+    width: 100% !important;
+    font-weight: 100 !important;
+    margin-top: 2rem !important;
+    font-size: 13px !important;
+    height: 35px !important;
+  }
+
+  .download img {
+    width: 100px !important;
+  }
+
+  .video-container {
+    left: 16% !important;
+    top: 30px !important;
+    width: 265px !important;
+    height: fit-content;
+  }
+
+  .landing-spotlight {
+    width: 149px;
+    top: 5% !important;
+    left: 22px !important;
+  }
+
+  .offering-component {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .offering span {
+    font-size: 1.5rem !important;
+  }
+
+  .offering h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .offering-widget {
+    width: 100% !important;
+    margin-top: 2rem !important;
+  }
+
+  .offering-widget5 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .offering-widget1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem !important;
+  }
+
+  .offering5 span {
+    font-size: 1.6rem !important;
+  }
+
+  .offering5 h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .offering-widget5 img {
+    width: 66%;
+  }
+
+  .offering-widget1 img {
+    width: 100%;
+  }
+
+  .gap5 {
+    gap: 10px !important;
+  }
+
+  .swiper-button-next {
+    right: 30% !important;
+    top: 97% !important;
+    z-index: 20 !important;
+  }
+
+  .swiper-button-prev {
+    left: 30% !important;
+    top: 97% !important;
+    z-index: 20 !important;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 8px) !important;
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+  }
+
+  .guarantee-wrapper {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    align-items: center;
+  }
+
+  .guarantee-widget {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .guarantee-widget li {
+    font-size: 14px !important;
+  }
+
+  .guarantee-options {
+    margin-top: .5rem !important;
+  }
+
+  .guarantee-component {
+    width: 100% !important;
+  }
+
+  .g-text {
+    margin-top: .5rem !important;
+  }
+
+  .explorer-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .explorer-text {
+    width: 100% !important;
+  }
+
+  .explorer-widget {
+    width: 100% !important;
+    padding-top: 3rem !important;
+  }
+
+  .explorer-btn {
+    width: 100% !important;
+  }
+
+  .platform-wrapper {
+    padding: 2rem !important;
+  }
+
+  .platform-widget {
+    height: 300px;
+    position: relative;
+  }
+
+  .platform-text {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .platform-text span {
+    font-size: 1.3rem !important;
+  }
+
+  .platform-text h4 {
+    font-size: 1rem !important;
+  }
+
+  .platform-text h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .pmh {
+    margin-top: .5rem !important;
+  }
+
+  .platform-widget img {
+    width: 90% !important;
+  }
+
+  .way {
+    margin-left: .5rem !important;
+  }
+
+  .Trading-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .trading-text {
+    margin-top: 2rem;
+    width: 100% !important;
+  }
+
+  .trading-header span {
+    font-size: 1.5rem !important;
+  }
+
+  .trading-header h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .gril {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 1.5rem !important;
+    gap: 2rem;
+  }
+
+  .gril h4 {
+    width: 100%;
+  }
+
+  .gril p {
+    width: 100%;
+  }
+
+  .support {
+    margin: 0 !important;
+  }
+
+  .support p {
+    width: 100%;
+  }
+
+  .trading-btn {
+    flex-direction: column !important;
+    gap: .5rem !important;
+  }
+
+  .trading-btn button {
+    width: 100% !important;
+    margin-top: .5rem !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .instituition-wrapper {
+    padding: 2rem !important;
+  }
+
+  .instituition-wrapper h4 {
+    font-size: 1.3rem !important;
+  }
+
+  .instituition-wrapper span {
+    font-size: 1.3rem !important;
+  }
+
+  .instituition-btn {
+    height: 36px !important;
+    font-size: 12px !important;
+  }
+
+  .crypto-tectx {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 2rem !important;
+  }
+
+  .buycryp {
+    margin-bottom: 3.5rem !important;
+  }
+
+  .buycryp h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .crypto-wrapper {
+    height: fit-content !important;
+  }
+
+  .buycryp span {
+    font-size: 1.3rem !important;
+  }
+
+  .crypto-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    margin: 0 !important;
+  }
+
+  .crypto-grid div {
+    width: 100% !important;
+  }
+
+  .crypto-tectx h4 {
+    margin-bottom: .5rem !important;
+  }
+
+  .cryptoo-btn {
+    width: 100% !important;
+  }
+
+  .crypto-widget {
+    display: none !important;
+  }
+
+  .Steps-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .inst {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-leftcontent {
+    width: 100% !important;
+    justify-content: center;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .step-leftcontent section {
+    justify-content: center !important;
+  }
+
+  .step-leftcontent span {
+    font-size: 1.5rem !important;
+  }
+
+  .step-leftcontent h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .steps-btn {
+    width: 100% !important;
+  }
+
+  .step-rightcontent {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 2rem !important;
+    margin-top: 0 !important;
+  }
+
+  .step-head {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+
+  .step-body {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .step-body p {
+    width: 75% !important;
+  }
+
+  .step-body h4 {
+    margin-top: 0 !important;
+  }
+
+}
+
+@media only screen and (min-width: 335px) and (max-width: 425px) {
   .header-component {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -390,12 +887,13 @@ h4 {
   .video-container {
     top: 30px !important;
     left: 54px !important;
+    height: fit-content;
   }
 
   .landing-spotlight {
-    width: 55% !important;
+    width: 57% !important;
     top: 5% !important;
-    right: 20px !important;
+    left: 25px !important;
   }
 
   .offering-component {
@@ -428,6 +926,7 @@ h4 {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 3rem;
   }
 
   .offering5 span {
@@ -470,6 +969,339 @@ h4 {
     top: var(--swiper-pagination-top, auto);
     left: 0;
     width: 100%;
+  }
+
+  .guarantee-wrapper {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    align-items: center;
+  }
+
+  .guarantee-widget {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .guarantee-widget li {
+    font-size: 14px !important;
+  }
+
+  .guarantee-options {
+    margin-top: .5rem !important;
+  }
+
+  .guarantee-component {
+    width: 100% !important;
+  }
+
+  .g-text {
+    margin-top: .5rem !important;
+  }
+
+  .explorer-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .explorer-text {
+    width: 100% !important;
+  }
+
+  .explorer-widget {
+    width: 100% !important;
+    padding-top: 3rem !important;
+  }
+
+  .explorer-btn {
+    width: 100% !important;
+  }
+
+  .platform-wrapper {
+    padding: 2rem !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .platform-widget {
+    height: 300px;
+    position: relative;
+  }
+
+  .platform-text {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .platform-text span {
+    font-size: 1.5rem !important;
+  }
+
+  .platform-text h4 {
+    font-size: 1rem !important;
+  }
+
+  .platform-text h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .pmh {
+    margin-top: .5rem !important;
+  }
+
+  .platform-widget img {
+    width: 90% !important;
+  }
+
+  .way {
+    margin-left: .5rem !important;
+  }
+
+  .Trading-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .trading-text {
+    margin-top: 2rem;
+    width: 100% !important;
+  }
+
+  .trading-header span {
+    font-size: 1.7rem !important;
+  }
+
+  .trading-header h1 {
+    font-size: 1.7rem !important;
+  }
+
+  .gril {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .gril h4 {
+    width: 100%;
+  }
+
+  .gril p {
+    width: 100%;
+  }
+
+  .support {
+    margin: 0 !important;
+  }
+
+  .support p {
+    width: 100%;
+  }
+
+  .trading-btn {
+    flex-direction: column !important;
+    gap: .5rem !important;
+  }
+
+  .trading-btn button {
+    width: 100% !important;
+    margin-top: .5rem !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .crypto-tectx {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 2rem !important;
+  }
+
+  .buycryp {
+    margin-bottom: 3.5rem !important;
+    justify-content: center !important;
+  }
+
+  .buycryp h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .crypto-wrapper {
+    height: fit-content !important;
+  }
+
+  .buycryp span {
+    font-size: 1.8rem !important;
+  }
+
+  .crypto-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    margin: 0 !important;
+  }
+
+  .crypto-grid div {
+    width: 100% !important;
+  }
+
+  .crypto-tectx h4 {
+    margin-bottom: .5rem !important;
+  }
+
+  .cryptoo-btn {
+    width: 100% !important;
+  }
+
+  .crypto-widget {
+    display: none !important;
+  }
+
+  .instituition-wrapper {
+    padding: 2rem !important;
+  }
+
+  .Steps-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .inst {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-leftcontent {
+    width: 100% !important;
+    justify-content: center;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .step-leftcontent section {
+    justify-content: center !important;
+  }
+
+  .step-leftcontent span {
+    font-size: 1.5rem !important;
+  }
+
+  .step-leftcontent h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .steps-btn {
+    width: 100% !important;
+  }
+
+  .step-rightcontent {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 2rem !important;
+    margin-top: 0 !important;
+  }
+
+  .step-head {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+
+  .step-body {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .step-body p {
+    width: 75% !important;
+  }
+
+  .step-body h4 {
+    margin-top: 0 !important;
+  }
+
+  .footer-wrapper {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .footer-links {
+    display: grid !important;
+    gap: 4rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .footer-payment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #cc {
+    width: 38px !important;
+  }
+
+  #ccd {
+    width: 38px !important;
+  }
+
+  #aap {
+    width: 45px !important;
+  }
+
+  #ggp {
+    width: 43px !important;
+  }
+
+  .about {
+    width: 100% !important;
+  }
+  .Product {
+    width: 100% !important;
+  }
+  .Service {
+    width: 100% !important;
+  }
+  .Resource {
+    width: 100% !important;
+  }
+  .Address {
+    width: 100% !important;
+  }
+  .Contact {
+    width: 100% !important;
+  }
+
+  .bitstamp-final-outro {
+    width: 100% !important;
+  }
+
+  .bitstamp-final-outro section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bitstamp-final-outro p {
+    font-size: 13px !important;
+  }
+
+  .astro-combiner {
+    gap: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }
 
@@ -561,7 +1393,7 @@ h4 {
   }
 
   .video-container {
-    top: 0% !important;
+    top: 50px !important;
     left: 15% !important;
   }
 
@@ -661,6 +1493,331 @@ h4 {
     left: 0;
     width: 100%;
   }
+
+  .guarantee-wrapper {
+    flex-direction: column !important;
+    padding: 2rem !important;
+    align-items: center;
+  }
+
+  .guarantee-widget {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .guarantee-widget li {
+    font-size: 16px !important;
+  }
+
+  .guarantee-options {
+    margin-top: .5rem !important;
+  }
+
+  .guarantee-component {
+    width: 100% !important;
+  }
+
+  .g-text {
+    margin-top: 1rem !important;
+  }
+
+  .explorer-wrapper {
+    padding: 3rem !important;
+    flex-direction: column !important;
+  }
+
+  .explorer-text {
+    width: 100% !important;
+  }
+
+  .explorer-widget {
+    width: 100% !important;
+    padding-top: 3rem !important;
+  }
+
+  .explorer-btn {
+    width: 100% !important;
+  }
+
+  .platform-wrapper {
+    padding: 2rem !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .platform-widget {
+    height: 400px;
+    position: relative;
+  }
+
+  .platform-text {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .platform-text span {
+    font-size: 2rem !important;
+  }
+
+  .platform-text h4 {
+    font-size: 1.2rem !important;
+  }
+
+  .platform-text h1 {
+    font-size: 2rem !important;
+  }
+
+
+  .pmh {
+    margin-top: .5rem !important;
+  }
+
+  .platform-widget img {
+    width: 90% !important;
+  }
+
+  .way {
+    margin-left: .5rem !important;
+  }
+
+  .Trading-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .trading-text {
+    margin-top: 2rem;
+    width: 100% !important;
+  }
+
+  .trading-header span {
+    font-size: 1.7rem !important;
+  }
+
+  .trading-header h1 {
+    font-size: 1.7rem !important;
+  }
+
+  .gril {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .gril h4 {
+    width: 100%;
+  }
+
+  .gril p {
+    width: 100%;
+  }
+
+  .support {
+    margin: 0 !important;
+  }
+
+  .support p {
+    width: 100%;
+  }
+
+  .trading-btn {
+    flex-direction: column !important;
+    gap: .5rem !important;
+  }
+
+  .trading-btn button {
+    width: 100% !important;
+    margin-top: .5rem !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .crypto-tectx {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 2rem !important;
+  }
+
+  .buycryp {
+    margin-bottom: 3.5rem !important;
+  }
+
+  .buycryp h1 {
+    font-size: 2.3rem !important;
+  }
+
+  .buycryp span {
+    font-size: 2.3rem !important;
+  }
+
+  .crypto-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    margin: 0 !important;
+  }
+
+  .crypto-grid div {
+    width: 100% !important;
+  }
+
+  .crypto-tectx h4 {
+    margin-bottom: .5rem !important;
+  }
+
+  .cryptoo-btn {
+    width: 100% !important;
+  }
+
+  .crypto-widget {
+    display: none !important;
+  }
+
+  .inst {
+    width: 65% !important;
+    gap: 1rem;
+  }
+
+  .Steps-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .inst {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step-leftcontent {
+    width: 100% !important;
+  }
+
+  .step-leftcontent span {
+    font-size: 2rem !important;
+  }
+
+  .step-leftcontent h1 {
+    font-size: 2rem !important;
+  }
+
+  .steps-btn {
+    display: none !important;
+  }
+
+  .step-rightcontent {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 2rem !important;
+    margin-top: 0 !important;
+  }
+
+  .step-head {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+
+  .step-body {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .step-body p {
+    width: 75% !important;
+  }
+
+  .step-body h4 {
+    margin-top: 0 !important;
+  }
+
+  
+  .footer-wrapper {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .footer-links {
+    display: grid !important;
+    gap: 4rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .footer-payment {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+  }
+
+  #cc {
+    width: 38px !important;
+  }
+
+  #ccd {
+    width: 38px !important;
+  }
+
+  #aap {
+    width: 45px !important;
+  }
+
+  #ggp {
+    width: 43px !important;
+  }
+
+  .about {
+    width: 100% !important;
+  }
+  .Product {
+    width: 100% !important;
+  }
+  .Service {
+    width: 100% !important;
+  }
+  .Resource {
+    width: 100% !important;
+  }
+  .Address {
+    width: 100% !important;
+  }
+  .Contact {
+    width: 100% !important;
+  }
+
+  .bitstamp-final-outro {
+    width: 100% !important;
+  }
+
+  .bitstamp-final-outro section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bitstamp-final-outro p {
+    font-size: 13px !important;
+  }
+
+  .astro-combiner {
+    gap: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
 }
 
 @media only screen and (min-width: 611px) and (max-width: 768px) {
@@ -747,7 +1904,7 @@ h4 {
   }
 
   .video-container {
-    top: -7% !important;
+    top: 50px !important;
     left: 25% !important;
   }
 
@@ -847,6 +2004,261 @@ h4 {
     left: 0;
     width: 100%;
   }
+
+  .guarantee-wrapper {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guarantee-widget li {
+    font-size: 16px !important;
+  }
+
+  .guarantee-options {
+    margin-top: .5rem !important;
+  }
+
+  .guarantee-component {
+    width: 92% !important;
+  }
+
+  .g-text {
+    margin-top: 1rem !important;
+  }
+
+  .explorer-wrapper {
+    padding: 3rem !important;
+    flex-direction: column !important;
+  }
+
+  .explorer-text {
+    width: 100% !important;
+  }
+
+  .explorer-widget {
+    width: 100% !important;
+    padding-top: 3rem !important;
+  }
+
+  .platform-wrapper {
+    padding: 2rem !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .platform-widget {
+    height: 535px;
+    position: relative;
+  }
+
+  .platform-text {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .platform-text span {
+    font-size: 2.5rem !important;
+  }
+
+  .platform-text h4 {
+    font-size: 1.2rem !important;
+  }
+
+  .platform-text h1 {
+    font-size: 2.5rem !important;
+  }
+
+
+  .pmh {
+    margin-top: .5rem !important;
+  }
+
+  .platform-widget img {
+    width: 90% !important;
+  }
+
+  .way {
+    margin-left: .5rem !important;
+  }
+
+  .Trading-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .trading-text {
+    margin-top: 2rem;
+    width: 100% !important;
+  }
+
+  .trading-header span {
+    font-size: 2.5rem !important;
+  }
+
+  .trading-header h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .gril h4 {
+    width: 75% !important;
+  }
+
+  .gril p {
+    width: 90% !important;
+  }
+
+  .trading-widget {
+    justify-content: center;
+    margin-top: 2rem !important;
+  }
+
+  .trading-widget img {
+    width: 80% !important;
+  }
+
+  .crypto-wrapper {
+    height: 85vh !important;
+  }
+
+  .crypto-tectx {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 2rem !important;
+  }
+
+  .buycryp {
+    margin-bottom: 3.5rem !important;
+  }
+
+  .buycryp h1 {
+    font-size: 2.3rem !important;
+  }
+
+  .buycryp span {
+    font-size: 2.3rem !important;
+  }
+
+  .crypto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem !important;
+    margin: 0 !important;
+  }
+
+  .crypto-grid div {
+    width: 100% !important;
+  }
+
+  .crypto-tectx h4 {
+    margin-bottom: .5rem !important;
+  }
+
+
+  .crypto-widget {
+    display: none !important;
+  }
+
+  .inst {
+    width: 65% !important;
+    gap: 1rem;
+  }
+
+  .Steps-wrapper {
+    padding: 3rem !important;
+    flex-direction: column !important;
+  }
+
+  .step-rightcontent {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100% !important;
+    margin-top: 0 !important;
+    gap: 2rem !important;
+  }
+
+  .step-leftcontent {
+    width: 100% !important;
+  }
+
+  .footer-wrapper {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .footer-links {
+    display: grid !important;
+    gap: 4rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .footer-payment {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+
+  #cc {
+    width: 38px !important;
+  }
+
+  #ccd {
+    width: 38px !important;
+  }
+
+  #aap {
+    width: 45px !important;
+  }
+
+  #ggp {
+    width: 43px !important;
+  }
+
+  .about {
+    width: 100% !important;
+  }
+  .Product {
+    width: 100% !important;
+  }
+  .Service {
+    width: 100% !important;
+  }
+  .Resource {
+    width: 100% !important;
+  }
+  .Address {
+    width: 100% !important;
+  }
+  .Contact {
+    width: 100% !important;
+  }
+
+  .bitstamp-final-outro {
+    width: 100% !important;
+  }
+
+  .bitstamp-final-outro section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bitstamp-final-outro p {
+    font-size: 13px !important;
+  }
+
+  .astro-combiner {
+    gap: 8rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
 }
 
 /* Desktop styles (901px and above) */
@@ -905,14 +2317,19 @@ h4 {
     margin-top: 3rem !important;
   }
 
-  .landing-text span,
-  h1 {
+  .landing-text span {
     font-size: 3rem !important;
     padding: 0 !important;
   }
 
+  .landing-text h1 {
+    font-size: 2.5rem !important;
+    padding: 0 !important;
+  }
+
   .minitext p {
-    width: 101% !important;
+    width: 70% !important;
+    font-size: 11px !important;
   }
 
 
@@ -920,16 +2337,11 @@ h4 {
     width: 115px !important;
   }
 
-  .video-container {
-    top: 30px !important;
-    left: 85px !important;
-  }
-
   .landing-spotlight {
     border-radius: 1.5rem !important;
-    width: 50% !important;
-    top: 29px !important;
-    left: 7.7% !important;
+    width: 190px !important;
+    top: 26px !important;
+    left: 6.7% !important;
   }
 
   .iphone {
@@ -938,7 +2350,8 @@ h4 {
 
   .video-container {
     width: 819px !important;
-    left: 17% !important;
+    top: 30px !important;
+    left: 85px !important;
   }
 
   .offering-component {
@@ -1026,6 +2439,175 @@ h4 {
     top: var(--swiper-pagination-top, auto);
     left: 0;
     width: 100%;
+  }
+
+  .guarantee-wrapper {
+    padding: 2rem !important;
+  }
+
+  .explorer-widget {
+    width: 100% !important;
+  }
+
+  .platform-wrapper {
+    padding: 2rem !important;
+  }
+
+  .platform-widget img {
+    top: 12% !important;
+  }
+
+  .platform-text {
+    padding-top: 2rem !important;
+  }
+
+  .pmh {
+    margin-top: 1rem !important;
+  }
+
+  .platform-text h1 {
+    font-size: 2rem !important;
+  }
+
+  .platform-text span {
+    font-size: 2rem !important;
+  }
+
+  .Trading-wrapper {
+    padding: 2rem !important;
+    flex-direction: column !important;
+  }
+
+  .trading-text {
+    margin-top: 2rem;
+    width: 100% !important;
+  }
+
+  .trading-header span {
+    font-size: 2.5rem !important;
+  }
+
+  .trading-header h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .gril h4 {
+    width: 75% !important;
+  }
+
+  .gril p {
+    width: 90% !important;
+  }
+
+  .trading-widget {
+    justify-content: center;
+    margin-top: 2rem !important;
+  }
+
+  .trading-widget img {
+    width: 60% !important;
+  }
+
+  .crypto-wrapper {
+    height: 85vh !important;
+  }
+
+  .crypto-tectx {
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 2rem !important;
+  }
+
+  .buycryp {
+    margin-bottom: 3.5rem !important;
+    margin-top: 3.5rem !important;
+  }
+
+  .buycryp h1 {
+    font-size: 3rem !important;
+  }
+
+  .buycryp span {
+    font-size: 3rem !important;
+  }
+
+  .crypto-grid {
+    display: flex;
+    gap: 2rem !important;
+    margin: 0 !important;
+  }
+
+  .crypto-grid div {
+    width: 100% !important;
+  }
+
+  .crypto-tectx h4 {
+    margin-bottom: .5rem !important;
+    width: 70% !important;
+  }
+
+  .crypto-widget {
+    display: none !important;
+  }
+
+  .Steps-wrapper {
+    padding: 3rem !important;
+    flex-direction: column !important;
+  }
+
+  .step-rightcontent {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100% !important;
+    margin-top: 0 !important;
+    gap: 4rem !important;
+  }
+
+  .step-leftcontent {
+    width: 100% !important;
+  }
+
+  #cc {
+    width: 38px !important;
+  }
+
+  #ccd {
+    width: 38px !important;
+  }
+
+  #aap {
+    width: 45px !important;
+  }
+
+  #ggp {
+    width: 43px !important;
+  }
+
+  .footer-wrapper{
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .footer-content {
+    gap: 1rem !important;
+  }
+
+  .social-links {
+    width: 25% !important;
+  }
+
+  .astro-combiner {
+    display: contents;
+  }
+
+  .footer-payment {
+    width: 41% !important;
+  }
+}
+
+@media only screen and (min-width: 930px) and (max-width:1024px) {
+  .minitext p {
+    font-size: 14px !important;
   }
 }
 
@@ -1083,6 +2665,7 @@ h4 {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
     padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 
   .landing-text {
@@ -1094,25 +2677,23 @@ h4 {
   }
 
   .landing-text h1 {
-    font-size: 4rem !important;
-    width: 90% !important;
+    font-size: 3.5rem !important;
+    width: 100% !important;
     padding: 0 !important;
   }
 
   .landing-spotlight {
     border-radius: 1.5rem !important;
-    width: 274px !important;
+    width: 251px;
     top: 34px !important;
     left: 37px !important;
   }
 
-  .iphone {
-    height: 88% !important;
-  }
 
   .video-container {
     width: 684px !important;
     left: 24% !important;
+    height: 653px !important;
   }
 
   .landing-btn {
@@ -1122,6 +2703,7 @@ h4 {
   .minitext p {
     width: 80% !important;
   }
+
   .offering-component {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
@@ -1208,6 +2790,92 @@ h4 {
     left: 0;
     width: 100%;
   }
+
+  .explorer-widget {
+    width: 80% !important;
+  }
+
+  .explorer-text p {
+    width: 70% !important;
+  }
+
+  .platform-wrapper {
+    padding: 2rem !important;
+  }
+
+  .platform-widget img {
+    top: 11% !important;
+  }
+
+  .platform-text {
+    padding-top: 2rem !important;
+  }
+
+  .pmh {
+    margin-top: 1rem !important;
+  }
+
+  .platform-text h1 {
+    font-size: 2rem !important;
+  }
+
+  .platform-text span {
+    font-size: 2rem !important;
+  }
+
+  .Trading-wrapper {
+    padding: 3rem !important;
+  }
+
+  .trading-text {
+    width: 80% !important;
+  }
+
+  .gril h4 {
+    width: 90% !important;
+  }
+
+  .gril p {
+    width: 90% !important;
+  }
+
+  .crypto-wrapper {
+    height: 94vh !important;
+  }
+
+  .crypto-widget img {
+    width: 62% !important;
+  }
+
+  .crypto-tectx {
+    margin-top: 7%;
+  }
+
+  .crypto-tectx h1 {
+    font-size: 3rem !important;
+  }
+
+  .crypto-grid {
+    margin-right: 0 !important;
+  }
+
+  .footer-wrapper {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+
+  .footer-content{
+    justify-content: space-between;
+  }
+
+  .astro-combiner{
+    display: contents !important;
+  }
+
+  .footer-payment{
+    width: 45% !important;
+  }
+
 }
 
 @media only screen and (min-width:1160px) {

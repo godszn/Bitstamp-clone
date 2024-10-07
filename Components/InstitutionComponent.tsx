@@ -1,6 +1,8 @@
 import React from 'react'
-
-const InstitutionComponent = () => {
+interface Notification{
+    buttonClick: ()=>void;
+}
+const InstitutionComponent: React.FC<Notification> = ({ buttonClick }) => {
     return (
         <div>
             <main className="instituition-wrapper p-[4rem]">
@@ -15,12 +17,12 @@ const InstitutionComponent = () => {
                     </div>
                     <div>
                         <h4 className='text-center' style={{ color: '#003b2f' }} >
-                            to crypto
+                            to crypto 
                         </h4>
                     </div>
                 </div>
                 <div className="instituition-widget flex justify-center pt-[4rem]">
-                    <main className='justify-around flex w-[50%]'>
+                    <main className='justify-around inst flex w-[50%]'>
                         <div>
                             <img src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_189x43/bitstampImageUrl/Dukascopy_888acd9202.webp" alt="" />
                         </div>
@@ -30,7 +32,7 @@ const InstitutionComponent = () => {
                     </main>
                 </div>
                 <div className='inst-button w-[100%] flex justify-center mt-[4rem]'>
-                    <button className="instituition-btn font-semibold" style={{ width: '260px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+                    <button onClick={buttonClick} className="instituition-btn font-semibold" style={{ width: '260px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
                         Learn about instituitional offer
                     </button>
                 </div>

@@ -1,12 +1,19 @@
 'use client'
+import { log } from 'console'
 import React, { useEffect, useState } from 'react'
 
-const HeaderComponent = () => {
+interface Notification {
+ buttonCLick:()=> void;
+}
+
+const HeaderComponent: React.FC<Notification> = ({ buttonCLick }) => {
   const [header, setHeader] = useState(false)
   
   const scrollHeader = () => {
     if (window.scrollY > 20) {
       setHeader(true)
+      console.log(window ,'window');
+      
     }else {
       setHeader(false)
     }
@@ -62,7 +69,7 @@ const HeaderComponent = () => {
               <p style={{color: '#2c3e50', fontSize: '14px', textDecoration: 'underline', cursor: 'pointer'}}>
                 Log in
               </p>
-              <button className='header-btn' style={{width: '140px', height: '37px', backgroundColor: '#003b2f', letterSpacing: '.7px', border: '1px solid #003b2f', borderRadius: '.3rem', fontSize: '13px', color: '#03fc9d', fontWeight: 'bold'}}>
+              <button onClick={buttonCLick} className='header-btn' style={{width: '140px', height: '37px', backgroundColor: '#003b2f', letterSpacing: '.7px', border: '1px solid #003b2f', borderRadius: '.3rem', fontSize: '13px', color: '#03fc9d', fontWeight: 'bold'}}>
                  Get Started
               </button>
               <aside className='menu'>

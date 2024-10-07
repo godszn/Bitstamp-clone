@@ -1,6 +1,8 @@
 import React from 'react'
-
-const SliderComponent = () => {
+interface Notification{
+  buttonClick: ()=>void;
+}
+const SliderComponent: React.FC<Notification> = ({ buttonClick }) => {
   return (
     <div>
       <main className="landing-wrapper flex" style={{ backgroundColor: '#003b2f', paddingTop: '4rem', paddingLeft: '6.2rem', paddingRight: '2.3rem', justifyContent: 'space-between' }}>
@@ -18,7 +20,7 @@ const SliderComponent = () => {
               Designed for simplicity, Bitstamp helps you feel good about crypto. Trusted Crypto Exchange Since 2011.
             </p>
           </div>
-          <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '3rem', color: '#003b2f' }}>
+          <button onClick={buttonClick} className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '3rem', color: '#003b2f' }}>
             Get Started
           </button>
           <div className='download flex' style={{ gap: '20px', marginTop: '2rem' }}>

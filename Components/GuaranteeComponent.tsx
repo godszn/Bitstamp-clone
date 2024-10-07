@@ -1,17 +1,19 @@
 import React from 'react'
-
-const GuaranteeComponent = () => {
+interface Notification{
+  buttonClick: ()=>void;
+}
+const GuaranteeComponent: React.FC<Notification> = ({ buttonClick }) => {
   return (
     <div>
       <div className="guarantee-wrapper flex p-[7rem] justify-between">
         <div className="guarantee-component w-[29%]">
           <main className='guarantee-widget'>
             <img src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_96x96/bitstamp.net/ease_of_trading_e2d0069e0b.webp" alt="" />
-            <div className='flex mt-[2rem] text-[1.7rem]'>
+            <div className='flex mt-[2rem] text-[1.7rem] g-text'>
               <span style={{ backgroundColor: 'white', paddingLeft: '10.5px', paddingRight: '10.5px', color: 'black' }}>
                 Ease
               </span>
-              <h1 className='text-[1.7rem] ml-[.5rem]'>
+              <h1 className='text-[1.7rem] ml-[.5rem] text-black'>
                 of Trading
               </h1>
             </div>
@@ -31,11 +33,11 @@ const GuaranteeComponent = () => {
         <div className="guarantee-component w-[32%]">
           <main className='guarantee-widget'>
             <img src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_96x96/bitstamp.net/institutional_grade_32894f37ec.webp" alt="" />
-            <div className='mt-[2rem] text-[1.7rem]'>
+            <div className='mt-[2rem] text-[1.7rem]  g-text'>
               <span style={{ backgroundColor: 'white', paddingLeft: '10.5px', paddingRight: '10.5px', color: 'black' }}>
                 Institutional-grade
               </span>
-              <h1 className='text-[1.7rem]'>
+              <h1 className='text-[1.7rem]  text-black'>
                 Security
               </h1>
             </div>
@@ -55,11 +57,11 @@ const GuaranteeComponent = () => {
         <div className="guarantee-component w-[30%]">
           <main className='guarantee-widget'>
             <img src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_96x96/bitstamp.net/proven_reliability_3643ecefba.webp" alt="" />
-            <div className='flex mt-[2rem] text-[1.7rem]'>
+            <div className='flex mt-[2rem] text-[1.7rem] g-text'>
               <span style={{ backgroundColor: 'white', paddingLeft: '10.5px', paddingRight: '10.5px',color: 'black' }}>
                 Proven
               </span>
-              <h1 className='text-[1.7rem] ml-[.5rem]'>
+              <h1 className='text-[1.7rem] ml-[.5rem] text-black '>
                 Reliability
               </h1>
             </div>

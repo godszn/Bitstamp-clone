@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import './globals.css'
 import HeaderComponent from "../../Components/HeaderComponent";
@@ -11,21 +12,29 @@ import CryptoComponent from "../../Components/CryptoComponent";
 import InstitutionComponent from "../../Components/InstitutionComponent";
 import StepsComponent from "../../Components/StepsComponent";
 import FooterComponent from "../../Components/FooterComponent";
+import Notif from "../../Components/Notif";
+import { useState } from "react";
 
 export default function Home() {
+  const [showNotif, setNotif] = useState(false);
+
+  const handleNotif = () => {
+    setNotif((!showNotif));
+  }
   return (
     <main className="main" style={{backgroundColor:' white'}}>
-    <HeaderComponent/>
-    <SliderComponent/>
-    <SwiperComponent/>
-   {/* <GuaranteeComponent/>
-    <ExplorerComponent/>
-    <PlatformComponent/>
-    <TradingComponent/>
-    <CryptoComponent/>
-    <InstitutionComponent/>
-    <StepsComponent/>
-    <FooterComponent/> */}
+    <HeaderComponent buttonCLick = {handleNotif}/>
+    <SliderComponent buttonClick = {handleNotif}/>
+    <SwiperComponent buttonClick = {handleNotif}/>
+    <GuaranteeComponent buttonClick = {handleNotif}/>
+    <ExplorerComponent buttonClick = {handleNotif}/>
+    <PlatformComponent buttonClick = {handleNotif}/>
+    <TradingComponent buttonClick = {handleNotif}/>
+    <CryptoComponent buttonClick = {handleNotif}/>
+    <InstitutionComponent buttonClick = {handleNotif}/>
+    <StepsComponent buttonClick = {handleNotif}/>
+    <FooterComponent/>
+    { showNotif &&  <Notif buttonClick ={handleNotif}/> }
     </main>
   );
 }

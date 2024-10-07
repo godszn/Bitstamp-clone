@@ -1,6 +1,8 @@
 import React from 'react'
-
-const StepsComponent = () => {
+interface Notification{
+  buttonClick: ()=>void;
+}
+const StepsComponent: React.FC<Notification> = ({ buttonClick }) =>  {
   return (
     <div>
       <main className="Steps-wrapper flex">
@@ -13,19 +15,19 @@ const StepsComponent = () => {
               to start trading
             </h1>
           </section>
-          <button className="steps-btn " style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '3.5rem', color: '#003b2f' }}>
+          <button onClick={buttonClick} className="steps-btn " style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '3.5rem', color: '#003b2f' }}>
             Get started
           </button>
         </div>
         <div className="step-rightcontent mt-12 mb-12 flex w-[50%]" style={{color: '#003b2f'}}>
           <main className="step1">
-            <div>
+            <div className='step-head'>
               <h4 >
                 1.
               </h4>
               <img className='mt-4' src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_96x96/bitstampImageUrl/register_a0962b5bb3.webp" alt="" />
             </div>
-            <div>
+            <div className='step-body'>
               <h4 className='mt-6 mb-4'>
                 Register
               </h4>
@@ -36,13 +38,13 @@ const StepsComponent = () => {
           </main>
 
           <main className="step2">
-            <div>
+            <div className='step-head'>
               <h4>
                 2.
               </h4>
               <img className='mt-4' src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_96x96/bitstampImageUrl/fund_43d0a9aed3.webp" alt="" />
             </div>
-            <div>
+            <div className='step-body'>
               <h4 className='mt-6 mb-4'>
                 Fund
               </h4>
@@ -53,13 +55,13 @@ const StepsComponent = () => {
           </main>
 
           <main className="step3">
-            <div>
+            <div className='step-head'>
               <h4>
                 3.
               </h4>
               <img className='mt-4' src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_96x96/bitstampImageUrl/trade_777dbac7e3.webp" alt="" />
             </div>
-            <div>
+            <div className='step-body'>
               <h4 className='mt-6 mb-4'>
                 Trade
               </h4>

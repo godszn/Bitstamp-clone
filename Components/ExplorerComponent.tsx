@@ -1,6 +1,8 @@
 import React from 'react'
-
-const ExplorerComponent = () => {
+interface Notification{
+    buttonClick: ()=>void;
+}
+const ExplorerComponent: React.FC<Notification> = ({ buttonClick }) => {
     return (
         <div>
             <div className="explorer-wrapper p-[4rem] flex justify-around">
@@ -18,7 +20,7 @@ const ExplorerComponent = () => {
                             Take a journey to crypto clarity with our handy guide: Crypto Categories Unveiled
                         </p>
                     </div>
-                    <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '3rem', color: '#003b2f' }}>
+                    <button onClick={buttonClick} className="explorer-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '3rem', color: '#003b2f' }}>
                         Start exploring
                     </button>
                 </div>

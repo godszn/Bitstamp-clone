@@ -1,6 +1,8 @@
 import React from 'react'
-
-const CryptoComponent = () => {
+interface Notification{
+  buttonClick: ()=>void;
+}
+const CryptoComponent: React.FC<Notification> = ({ buttonClick }) =>  {
   return (
     <div>
       <main className="crypto-wrapper relative flex h-[103vh]">
@@ -8,7 +10,7 @@ const CryptoComponent = () => {
           <img className='absolute left-[-10%]' src="https://assets.bitstamp.net/msc/_ipx/f_webp&s_780x702/bitstampImageUrl/guy_e7100f4155.webp" alt="" />
         </div>
         <div className="crypto-tectx mt-[9%] w-[60%]">
-          <div className='flex items-center'>
+          <div className='flex items-center buycryp'>
             <h1 className='mr-[.8%]' style={{ color: '#003b2f' }}>
               Buy crypto
             </h1>
@@ -42,7 +44,7 @@ const CryptoComponent = () => {
               </p>
             </div>
           </div>
-          <button className="cryptoo-btn " style={{ width: '160px', height: '45px', backgroundColor: '#003b2f', borderRadius: '.3rem', marginTop: '2.5rem', color: '#03fc9d' }}>
+          <button onClick={buttonClick} className="cryptoo-btn " style={{ width: '160px', height: '45px', backgroundColor: '#003b2f', borderRadius: '.3rem', marginTop: '2.5rem', color: '#03fc9d' }}>
             Get started
           </button>
         </div>

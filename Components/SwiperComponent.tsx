@@ -9,8 +9,10 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-const SwiperComponent = () => {
+interface Notification{
+    buttonClick: ()=>void;
+}
+const SwiperComponent: React.FC<Notification> = ({ buttonClick }) => {
     return (
         <div className='pb-[2rem] bg-white swiper-wrapps'>
             <Swiper
@@ -42,7 +44,7 @@ const SwiperComponent = () => {
                             <p style={{ color: '#003b2f', marginTop: '1rem' }}>
                                 Effortlessly schedule your transaction and build your crypto routine.
                             </p>
-                            <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+                            <button onClick={buttonClick} className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
                                 Start now
                             </button>
                         </div>
@@ -67,7 +69,7 @@ const SwiperComponent = () => {
                             <p style={{ color: '#003b2f', marginTop: '1rem' }}>
                                 The transparent way to put your crypto to work
                             </p>
-                            <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+                            <button onClick={buttonClick} className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
                                 Explore more
                             </button>
                         </div>
@@ -95,7 +97,7 @@ const SwiperComponent = () => {
                             <p style={{ color: '#003b2f', marginTop: '1rem' }}>
                                 Feel good about crypto
                             </p>
-                            <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+                            <button onClick={buttonClick} className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
                                 Download now
                             </button>
                         </div>
@@ -115,7 +117,7 @@ const SwiperComponent = () => {
                             <p style={{ color: '#003b2f', marginTop: '1rem' }}>
                                Built for pro traders and crypto experts
                             </p>
-                            <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+                            <button onClick={buttonClick} className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
                                 Explore more
                             </button>
                         </div>
@@ -143,7 +145,7 @@ const SwiperComponent = () => {
                             <p style={{ color: '#003b2f', marginTop: '1rem' }}>
                                 Top-rated centralized crypto exchange
                             </p>
-                            <button className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+                            <button onClick={buttonClick} className="landing-btn" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
                                 Start now
                             </button>
                         </div>

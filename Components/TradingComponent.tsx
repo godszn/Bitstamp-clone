@@ -1,6 +1,8 @@
 import React from 'react'
-
-const TradingComponent = () => {
+interface Notification{
+  buttonClick: ()=>void;
+}
+const TradingComponent: React.FC<Notification> = ({ buttonClick }) => {
   return (
     <div>
       <div className="Trading-wrapper flex text-[black]">
@@ -42,10 +44,10 @@ const TradingComponent = () => {
             </div>
           </section>
           <div className="trading-btn flex gap-[1rem] mt-[1rem]">
-            <button className="trading-btn w-[215px] font-medium" style={{ height: '45px', backgroundColor: 'white', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+            <button onClick={buttonClick} className="trading-btn w-[215px] font-medium" style={{ height: '45px', backgroundColor: 'white', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
               More for pro traders
             </button>
-            <button className="trading-btn font-medium" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
+            <button onClick={buttonClick} className="trading-btn font-medium" style={{ width: '160px', height: '45px', backgroundColor: '#03fc9d', borderRadius: '.3rem', marginTop: '1rem', color: '#003b2f' }}>
               Get started
             </button>
           </div>
