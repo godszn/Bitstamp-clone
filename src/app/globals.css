@@ -327,9 +327,17 @@ h4 {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  background:rgba(0, 0, 0, 0.5);
+  background:rgb(35 30 37 / 93%);
   z-index: 1000;
   position: fixed;
+}
+
+.notif-sec {
+  color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .notif-wrapper p{
@@ -345,13 +353,18 @@ h4 {
 }
 
 .notif-wrapper h1{
- color: #003b2f;
+ color: white;
 }
 
 .notif-btn{
   display: flex;
   justify-content: end;
   font-weight: 600;
+}
+
+.dropdown-list li{
+font-size: 18px;
+margin: 10px 0;
 }
 
 /**************** Media Queries ******************/
@@ -796,6 +809,25 @@ h4 {
 
   .step-body h4 {
     margin-top: 0 !important;
+  }
+
+  .notif-comp {
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .notif-btn {
+    justify-content: center !important;
+    margin-top: 4rem !important;
+  }
+
+  .notif-btn button {
+    width: 100% !important;
+  }
+
+  .notif-wrapper {
+    justify-content: center !important;
   }
 
 }
@@ -1302,6 +1334,25 @@ h4 {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+  }
+
+  .notif-comp {
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .notif-btn {
+    justify-content: center !important;
+    margin-top: 4rem !important;
+  }
+
+  .notif-btn button {
+    width: 100% !important;
+  }
+
+  .notif-wrapper {
+    justify-content: center !important;
   }
 }
 
@@ -1818,6 +1869,25 @@ h4 {
     align-items: center !important;
   }
 
+  .notif-comp {
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .notif-btn {
+    justify-content: center !important;
+    margin-top: 4rem !important;
+  }
+
+  .notif-btn button {
+    width: 100% !important;
+  }
+
+  .notif-wrapper {
+    justify-content: center !important;
+  }
+
 }
 
 @media only screen and (min-width: 611px) and (max-width: 768px) {
@@ -2258,6 +2328,10 @@ h4 {
     gap: 8rem !important;
     display: flex !important;
     align-items: center !important;
+  }
+
+  .dropdown-list li{
+    margin: 20px 0 !important;
   }
 }
 

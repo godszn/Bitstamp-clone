@@ -17,13 +17,18 @@ import { useState } from "react";
 
 export default function Home() {
   const [showNotif, setNotif] = useState(false);
+  const [isMenuOpen , setMenuOpen] = useState(false);
+
+  const handleMenu = () => {
+    setMenuOpen((!isMenuOpen));
+  }
 
   const handleNotif = () => {
     setNotif((!showNotif));
   }
   return (
     <main className="main" style={{backgroundColor:' white'}}>
-    <HeaderComponent buttonCLick = {handleNotif}/>
+    <HeaderComponent buttonCLick = {handleNotif} menuOpen = {isMenuOpen} toggleMenu={handleMenu}/>
     <SliderComponent buttonClick = {handleNotif}/>
     <SwiperComponent buttonClick = {handleNotif}/>
     <GuaranteeComponent buttonClick = {handleNotif}/>

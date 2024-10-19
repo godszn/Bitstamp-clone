@@ -8,8 +8,8 @@ const Notif: React.FC<Notification> = ({ buttonClick }) => {
     return (
         <div>
             <div className="notif-wrapper absolute top-0">
-                <div>
-                    <section>
+                <div className='notif-comp'>
+                    <section className ='notif-sec'>
                         <h1>
                             Sorry!
                         </h1>
