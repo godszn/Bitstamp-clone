@@ -1,11 +1,13 @@
+import Image from 'next/image';
+import pop from '../../poco/assets/pop.png'
 import React from 'react'
-interface Notification{
-  buttonClick: ()=>void;
+interface Notification {
+  buttonClick: () => void;
 }
 const SliderComponent: React.FC<Notification> = ({ buttonClick }) => {
   return (
     <div>
-      <main className="landing-wrapper flex" style={{ backgroundColor: '#003b2f', paddingTop: '4rem', paddingLeft: '6.2rem', paddingRight: '2.3rem', justifyContent: 'space-between' }}>
+      <main className="landing-wrapper flex" style={{ backgroundColor: '#003b2f', paddingTop: '6.5rem', paddingLeft: '3.2rem', paddingRight: '2.3rem', paddingBottom: '4.3rem', justifyContent: 'space-between' }}>
         <div className="landing-text" style={{ width: '50%' }}>
           <div>
             <span style={{ backgroundColor: '#03fc9d', paddingLeft: '5px', paddingRight: '5px', color: '#003b2f' }}>
@@ -28,12 +30,14 @@ const SliderComponent: React.FC<Notification> = ({ buttonClick }) => {
             <img src="https://assets.bitstamp.net/static/webapp/images/google-play.b5d4bf2604f09e2e08d9a745e8cd61f0c9ed0155.svg" alt="" />
           </div>
         </div>
-        <div className="video-container">
-          <img className='iphone' src="https://assets.bitstamp.net/static/webapp/images/landing/mobile.e6fd172ce1de2b580c11a05f4724d9d1a6a75fdb.avif" alt="" />
-          <video autoPlay loop muted className="landing-spotlight" poster="https://assets.bitstamp.net/static/webapp/images/landing/simple-app-poster.a1b7dfe70742fbcb21db7e0af9c3e2d8afbc509f.png">
-            <source src="https://assets.bitstamp.net/static/webapp/video/simple-app.7ed2b3ddb8d981788ad653cf1f024bfc236ff66d.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <section className = 'video-wrapper flex items-center w-[50%] relative'>
+          <div className="video-container w-full flex flex-col items-center relative">
+            <Image src={pop} className='w-[39%]' style={{zIndex: '10'}} alt=''/>
+            <video autoPlay loop muted playsInline className="landing-spotlight absolute w-[34%] top-[2.7%] rounded-[1rem]" poster="https://assets.bitstamp.net/static/webapp/images/landing/simple-app-poster.a1b7dfe70742fbcb21db7e0af9c3e2d8afbc509f.png">
+              <source src="https://assets.bitstamp.net/static/webapp/video/simple-app.7ed2b3ddb8d981788ad653cf1f024bfc236ff66d.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
       </main>
     </div>
   )
