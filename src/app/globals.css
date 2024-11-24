@@ -453,8 +453,8 @@ margin: 10px 0;
   }
 
   .video-wrapper {
-    margin-top: 20px !Important;
-    width: 100%;
+    margin-top: 20px !important;
+    width: 100% !important;
   }
 
   .offering-component {
