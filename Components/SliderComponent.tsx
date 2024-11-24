@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import pop from '../../poco/assets/pop.png'
+import pop from '../assets/pop.png'
 import React from 'react'
 interface Notification {
   buttonClick: () => void;
